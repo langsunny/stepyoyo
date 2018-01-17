@@ -35,10 +35,10 @@ ssh-keygen -t rsa -C “seesaw@email.com”
 
 移除文件分为两种情况，一种是直接从git仓库，缓存区，工作目录中全部删除，另外一种就是从git仓库，缓存区中删除，但是依旧保留在工作目录中。
 a.保留在工作目录中：git rm --cached，这样的话文件将会出现在Untracked files里面，因为他只存在与工作目录中。
-git rm --cached.png
+git rm --cached test.txt
 
 b.直接从工作目录中删除：git rm，为了这个命令的展示，我又将m.txt提交到了仓库中。
-git rm.png
+git rm  test.txt
 
 如果删除之前修改过并且已经放到暂存区域的话，则必须要用强制删除选项 -f，或者先commit再删除。
 
