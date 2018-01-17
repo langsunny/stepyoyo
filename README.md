@@ -6,3 +6,6 @@ author:langsunny
 date:Jan 18, 2018
 version: 1.0.2
 所需器件：arduino板1块，unl2003 1片 ，步进电机型号28byj-48，5v版本1只，连接线若干。
+
+
+帮助文档里包含部分git使用帮助，包括基本命令和ssh push设置等
