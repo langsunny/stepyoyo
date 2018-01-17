@@ -3,12 +3,12 @@
 1、在每次push 的时候，都要输入用户名和密码，是不是很麻烦？原因是使用了https方式 push，在git bash里边输入 git remote -v
 
 $ git remote rm origin    //删除http
-$ git remote add origin git@github.com:sosout/myblog.git   //添加shh
+$ git remote add origin git@github.com:langsunny/stepyoyo.git   //添加shh,以我的git仓库为例
 $ git push origin   //执行你的更改
 
 再次执行 git remote -v 查看是否更新成功（对比第一次执行）
 
-ssh-keygen -t rsa -C “email” 
+ssh-keygen -t rsa -C “seesaw@email.com” 
 添加你的SSH公钥（email是你github注册账号的邮箱）
 
    
@@ -24,4 +24,4 @@ ssh-keygen -t rsa -C “email”
 
 私钥一般在你的用户文件夹的 .ssh下，打开xx.pub,复制内容，在github中创建ssh keys （没有私钥，百度）
 
-接下来 push 就不需要密码了
+接下来 push 就不需要密码了.Enjoy it!
