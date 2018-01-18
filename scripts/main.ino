@@ -42,7 +42,7 @@ int lastButtonState = LOW;
 long lastDebounceTime = 0;
 // 定义延迟抖动的时间变量，
 // 并初始化为50毫秒。
-long debounceDelay = 50;
+long debounceDelay = 10;
  
 // 初始化步进电机要使用的Arduino的引脚编号
 Stepper myStepper(stepsPerRevolution, 8, 9, 10, 11);
@@ -90,9 +90,9 @@ void loop()
         // 则变为灭。如果为灭，
         // 则变为亮。
         ledState = !ledState;
-        num = num+5;
-        if (num == 200) {  
-         num = 150; //速度置位默认速度１５０  
+        speed = speed+5;
+        if (speed == 200) {  
+         speed = 150; //速度置位默认速度１５０  
     } 
       }
     }
