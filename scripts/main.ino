@@ -19,7 +19,7 @@ version: 1.0.1
 const int stepsPerRevolution = 200;
 // 定义按键输入针脚号常量，
 // 并初始化为2号针脚。
-int num = 0; //
+int speed = 150; //摇摆器默认转速150
 
 const int buttonPin = 12;
 
@@ -91,8 +91,8 @@ void loop()
         // 则变为亮。
         ledState = !ledState;
         num = num+5;
-        if (num == 50) {  
-         num = 0; //判断从0到9  
+        if (num == 200) {  
+         num = 150; //速度置位默认速度１５０  
     } 
       }
     }
@@ -102,14 +102,14 @@ void loop()
   // 更新按键最近一次状态变化的变量
    lastButtonState = reading;
    // 设置转速，单位r/min
-   myStepper.setSpeed(135+num);//摇摆器默认转速150
+   myStepper.setSpeed(speed);//摇摆器默认转速150
    
-    Serial.println(num);
+    Serial.println(speed);
     myStepper.step(stepsPerRevolution);
     delay(150);
  
     // 逆时针一次旋转
     Serial.println("counterclockwise");
-    myStepper.step(-(stepsPerRevolution+num));
+    myStepper.step(-stepsPerRevolution);
     delay(150);
 }
