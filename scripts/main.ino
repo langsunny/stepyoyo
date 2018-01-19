@@ -21,7 +21,7 @@ const int stepsPerRevolution = 200;
 // 并初始化为2号针脚。
 int speed = 150; //摇摆器默认转速150
 
-const int buttonPin = 12;
+const int buttonPin = 12;//按键开发引脚为12号
 
 // 定义LED输入针脚号常量，
 // 并初始化为13号针脚。
@@ -42,7 +42,7 @@ int lastButtonState = LOW;
 long lastDebounceTime = 0;
 // 定义延迟抖动的时间变量，
 // 并初始化为50毫秒。
-long debounceDelay = 10;
+long debounceDelay = 50;
  
 // 初始化步进电机要使用的Arduino的引脚编号
 Stepper myStepper(stepsPerRevolution, 8, 9, 10, 11);
