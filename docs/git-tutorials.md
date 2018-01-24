@@ -1,4 +1,4 @@
-一. 使用ssh方式push（推荐）
+### 一. 使用ssh方式push（推荐）
 
 1、在每次push 的时候，都要输入用户名和密码，是不是很麻烦？原因是使用了https方式 push，在git bash里边输入 git remote -v
 
@@ -27,7 +27,8 @@ ssh-keygen -t rsa -C “seesaw@email.com”
 接下来 push 就不需要密码了.Enjoy it!
 
 
-二 进阶技巧
+###二 进阶技巧
+
  1. 实际开发中，我们经常想看到前几次提交了啥，或者说想直接回退到某次提交，那么git 能够很好的实现你的需求，我们把test.txt多提交几次，然后使用git log命令，可以查看提交的历史和每次提交的内容更改。
 
 那么如果你对最近一次提交不满意，怎么回退到上次提交或者以前的提交呢，那么得使用git reset --hard +历史版本的id（commit后面的一段hash码）命令。
@@ -41,6 +42,11 @@ b.直接从工作目录中删除：git rm，为了这个命令的展示，我又
 git rm  test.txt
 
 如果删除之前修改过并且已经放到暂存区域的话，则必须要用强制删除选项 -f，或者先commit再删除。
+
+##github学习资料汇总:
+
+* Git自学之路（四）- git branch 分支 http://blog.csdn.net/kjunchen/article/details/52155055 
+* Git自学之路（三）- Git打标签  http://blog.csdn.net/kjunchen/article/details/52027856 
 
 
 
